@@ -18,9 +18,10 @@ public:
     ~LoginPage();
 
 private slots:
-    void on_btnLogin_clicked();
     void onLoginSuccess(const QString &message);
     void onLoginError(const QString &errorMessage);
+
+    void on_pushButton_clicked();
 
 private:
     Ui::LoginPage *ui;

@@ -24,14 +24,6 @@ LoginPage::~LoginPage()
     delete ui;
 }
 
-void LoginPage::on_btnLogin_clicked()
-{
-    QString username = ui->txtUser->text();
-    QString password = ui->txtPassword->text();
-
-    // Llama al método de inicio de sesión de ServerConnection
-    m_serverConnection->login(username, password);
-}
 
 void LoginPage::onLoginSuccess(const QString &message)
 {
@@ -51,4 +43,14 @@ void LoginPage::onLoginError(const QString &errorMessage)
 }
 
 
+
+
+void LoginPage::on_pushButton_clicked()
+{
+    QString username = ui->txtUser->text();
+    QString password = ui->txtPassword->text();
+
+    // Llama al método de inicio de sesión de ServerConnection
+    m_serverConnection->login(username, password);
+}
 
